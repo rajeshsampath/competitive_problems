@@ -1,0 +1,45 @@
+Solution-1: Using Two For Loops T O(n^2) & S O(1)
+
+/**
+*
+*  param-1 -> array[distinct non empty number], param2 -> targetSum
+*  result => empty [] / [numbers which yield targetSum]]
+*
+**/
+function twoNumberSum
+    1. iterate the array from 0 to length-1 and store the index in i (outer loop)
+    2. iterate the array from from 1 to length-1 and store the index in j (inner loop)
+    3. inside the inner loop compare the condition (array[i]+array[j] === targetSum)
+    4. if the above (point 3) condition is true then => return [array[i], array[j]]
+    5. else the above (point 3) condition is false go to next number in array[i] and array[j]
+
+
+Solution-2: Using Hash Map T O(n) & S O(n)
+
+/**
+*
+*  param-1 -> array[distinct non empty number], param2 -> targetSum
+*  result => empty [] / [numbers which yield targetSum]]
+*
+**/
+function twoNumberSum
+    1. Create one hashmap to store the occurrence of the number with flag true
+    2. iterate the array from 0 to length of array
+    3. store the potential match value (targetSum - array[i])
+    4. check the condition the potential match is available in our hashmap
+    5. if the potential match is available return [potentialmatch, array[i]]
+    6. if the condition is failed store the flag true with key of array[i] for eg { 3: true }
+    7. iterate upto the exit condition
+    8. if not get any potential match return []
+
+
+Solution-3: Using single for loop with ascending sorted input array 
+
+/**
+*
+*  param-1 -> array[distinct non empty number], param2 -> targetSum
+*  result => empty [] / [numbers which yield targetSum]]
+*
+**/
+function twoNumberSum
+    
